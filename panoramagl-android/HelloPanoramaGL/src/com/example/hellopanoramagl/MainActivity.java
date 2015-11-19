@@ -132,7 +132,8 @@ public class MainActivity extends PLView
 			@Override
 			public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id)
 			{
-				loadPanoramaFromJSON(position);
+				//loadPanoramaFromJSON(position);
+				loadPanorama(position);
 			}
 
 			@Override
@@ -217,19 +218,19 @@ public class MainActivity extends PLView
 		    	//Spherical2 panorama (supports up 2048x1024 image)
 		    	case 1:
 		    		panorama = new PLSpherical2Panorama();
-		            ((PLSpherical2Panorama)panorama).setImage(new PLImage(PLUtils.getBitmap(context, R.raw.quito1_s2), false));
+		            ((PLSpherical2Panorama)panorama).setImage(new PLImage(PLUtils.getBitmap(context, R.raw.pic2048x1024), false));
 		            break;
             	//Spherical panorama (supports up 1024x512 image)
 		    	case 2:
 		    		panorama = new PLSphericalPanorama();
-		            ((PLSphericalPanorama)panorama).setImage(new PLImage(PLUtils.getBitmap(context, R.raw.quito1_s), false));
+		            ((PLSphericalPanorama)panorama).setImage(new PLImage(PLUtils.getBitmap(context, R.raw.pic1024x512), false));
 		    		break;
 		    	//Cylindrical panorama (supports up 1024x1024 image)
 		    	case 3:
 		    		PLCylindricalPanorama cylindricalPanorama = new PLCylindricalPanorama();
 		        	cylindricalPanorama.setHeight(3.0f);
 		        	cylindricalPanorama.getCamera().setPitchRange(0.0f, 0.0f);
-		        	cylindricalPanorama.setImage(new PLImage(PLUtils.getBitmap(context, R.raw.quito1_s), false));
+		        	cylindricalPanorama.setImage(new PLImage(PLUtils.getBitmap(context, R.raw.pic1024x1024), false));
 		            panorama = cylindricalPanorama;
 		    		break;
 		    	default:

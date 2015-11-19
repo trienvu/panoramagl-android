@@ -2120,6 +2120,8 @@ public class PLView extends Activity implements PLIView, SensorEventListener, On
 	@Override
 	public void onSensorChanged(SensorEvent event)
 	{
+		if(true)
+			return;
     	float[] values = event.values;
 		switch(event.sensor.getType())
 		{

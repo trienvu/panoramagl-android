@@ -25,7 +25,7 @@
         <activity
             android:name="com.panoramagl.example.PanoramaGLActivity"
             android:label="@string/app_name"
-            android:configChanges="orientation|screenSize|keyboardHidden" >
+        >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
